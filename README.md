@@ -10,15 +10,28 @@ As described in the Methods section (3) of the paper, we use a combination of op
 - [GROMACS](http://www.gromacs.org/) (2016.3)
 - [PLUMED](https://www.plumed.org/) (2.4)
 - [python](https://www.python.org/) (3.6)
-- [MARTINI](http://cgmartini.nl/) (2.1)
+- [MARTINI](http://cgmartini.nl/) (2.2)
+- [WHAM](http://membrane.urmc.rochester.edu/?page_id=126) (2.0+)
 
 Various MARTINI related scripts can be found on the tool section of the site (http://cgmartini.nl/index.php/tools2/proteins-and-bilayers) such as the default insane script. The methods described here are heavily based in the GROMACS framework and likely work best remaining as such if hoping to conduct a similar project using any of these files.
 
 We hope that many of the files and tools provided here can be applied to other MARTINI based model membrane projects, with little to no adaptions needed. 
 
-### Guides
+### Guide
 
-__Step 1__ -
+__Step 1__ - Use our methods section and/or MARTINI tutorials to generate phase separated membranes of desired lipid composition in aqueous solution. If studying alcohols, create additional systems with various alcohol additions. All membrane systems  can be quickly generated using MATRINI's tools or our version of `insnane.py` (it should be noted that MARTINI is capable of handling alcohol's now, but was not at the time this study was started).
+
+__Step 2__ - Generate density profiles from the lipid membrane with `gmx density` in order to determine the compositions of each phase.
+
+__Step 3__ - Follow our methods section in order to equilibrate and run single phase systems (again n-alcohol addition is completely optional).
+
+__Step 4__ - Use a combination of metadynamics and umbrella sampling (we do so with [PLUMED]) in order to remove a desired cholesterol molecule and measure the free energy of this transition in various conditions. Associated scrips for this process are found in the scripts/umbrella_scripts/ directory. The WHAM method is then used to stitch each window together generating the compltete free energy surface of the process. The WHAM command is included in `pmfcalculation.sh` bash script.
+
+__Step 5__ -  Calculation of various membrane properties can be conducted on the resulting data using various tools in the scripts/ directory. 
+      
+      __Step 5.1__ - Use `bilayerthickness.py` in order to calculate the width of each model membrane.
+      
+      __Step 5.2__ - Use `do-order-multiedit.py` (minor tweaks to the one provided by MARTINI) in     order to calculate the lipid tail order parameter described in section 3.2 of the paper.
 
 
 ### Citation
