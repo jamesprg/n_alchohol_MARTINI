@@ -19,19 +19,19 @@ We hope that many of the files and tools provided here can be applied to other M
 
 ### Guide
 
-__Step 1__ - Use our methods section and/or MARTINI tutorials to generate phase separated membranes of desired lipid composition in aqueous solution. If studying alcohols, create additional systems with various alcohol additions. All membrane systems  can be quickly generated using MATRINI's tools or our version of `insnane.py` (it should be noted that MARTINI is capable of handling alcohol's now, but was not at the time this study was started).
+- __Step 1__ - Use our methods section and/or MARTINI tutorials to generate phase separated membranes of desired lipid composition in aqueous solution. If studying alcohols, create additional systems with various alcohol additions. All membrane systems  can be quickly generated using MATRINI's tools or our version of `insnane.py` (it should be noted that MARTINI is capable of handling alcohol's now, but was not at the time this study was started).
 
-__Step 2__ - Generate density profiles from the lipid membrane with `gmx density` in order to determine the compositions of each phase.
+- __Step 2__ - Generate density profiles from the lipid membrane with `gmx density` in order to determine the compositions of each phase.
 
-__Step 3__ - Follow our methods section in order to equilibrate and run single phase systems (again n-alcohol addition is completely optional).
+- __Step 3__ - Follow our methods section in order to equilibrate and run single phase systems (again n-alcohol addition is completely optional).
 
-__Step 4__ - Use a combination of metadynamics and umbrella sampling (we do so with [PLUMED]) in order to remove a desired cholesterol molecule and measure the free energy of this transition in various conditions. Associated scrips for this process are found in the scripts/umbrella_scripts/ directory. The WHAM method is then used to stitch each window together generating the compltete free energy surface of the process. The WHAM command is included in `pmfcalculation.sh` bash script.
+- __Step 4__ - Use a combination of metadynamics and umbrella sampling (we do so with [PLUMED]) in order to remove a desired cholesterol molecule and measure the free energy of this transition in various conditions. Associated scrips for this process are found in the scripts/umbrella_scripts/ directory. The WHAM method is then used to stitch each window together generating the compltete free energy surface of the process. The WHAM command is included in `pmfcalculation.sh` bash script.
 
-__Step 5__ -  Calculation of various membrane properties can be conducted on the resulting data using various tools in the scripts/ directory. 
+- __Step 5__ -  Calculation of various membrane properties can be conducted on the resulting data using various tools in the scripts/ directory. 
 
-  __Step 5.1__ - Use `bilayerthickness.py` in order to calculate the width of each model membrane.
+  - __Step 5.1__ - Use `bilayerthickness.py` in order to calculate the width of each model membrane.
   
-  __Step 5.2__ - Use `do-order-multiedit.py` (minor tweaks to the one provided by MARTINI) in     order to calculate the lipid tail order parameter described in section 3.2 of the paper.
+  - __Step 5.2__ - Use `do-order-multiedit.py` (minor tweaks to the one provided by MARTINI) in     order to calculate the lipid tail order parameter described in section 3.2 of the paper.
 
 
 ### Citation
