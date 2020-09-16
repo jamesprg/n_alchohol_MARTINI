@@ -7,10 +7,10 @@ With an goal of making our scientific work both reproducible and transparent, th
 
 As described in the Methods section (3) of the paper, we use a combination of open source software. In order to recreate our results and conduct analysis, the following open source softward was used:
 
--[GROMACS] (http://www.gromacs.org/) (2016.3)
--[PLUMED](https://www.plumed.org/) (2.4)
--[python](https://www.python.org/) (3.6)
--[MARTINI](http://cgmartini.nl/) (2.1)
+- [GROMACS] (http://www.gromacs.org/) (2016.3)
+- [PLUMED] (https://www.plumed.org/) (2.4)
+- [python] (https://www.python.org/) (3.6)
+- [MARTINI] (http://cgmartini.nl/) (2.1)
 
 Various MARTINI related scripts can be found on the tool section of the site (http://cgmartini.nl/index.php/tools2/proteins-and-bilayers) such as the default insane script. The methods described here are heavily based in the GROMACS framework and likely work best remaining as such if hoping to conduct a similar project using any of these files.
 
