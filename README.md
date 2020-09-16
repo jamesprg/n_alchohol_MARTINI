@@ -36,4 +36,4 @@ We hope that many of the files and tools provided here can be applied to other M
 
 ### Citation
 
-When using our code (or any of the referenced software), please cite the respective creators or our repository and paper. The paper can be foun here.
+When using our code (or any of the referenced software), please cite the respective creators or our repository and paper. The paper can be found here.
