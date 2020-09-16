@@ -1,0 +1,34 @@
+#!/bin/bash
+
+for AT in `seq 0 0.1 3.9`;
+do cat >plumed.$AT.dat << EOF
+
+RESTART
+C1: COM ATOMS=1-128,137-1096,1099-2194
+C2: COM ATOMS=129-136
+d: DISTANCE ATOMS=C1,C2 COMPONENTS
+
+restraint-dz: RESTRAINT ARG=d.z KAPPA=1000 AT=$AT 
+PRINT STRIDE=10 ARG=d.x,d.y,d.z,restraint-dz.bias, FILE=COLVAR
+EOF
+done
+for i in {0..9}; do mv plumed.0.$i.dat plumed.$i.dat; done
+for i in {0..9}; do mv plumed.1.$i.dat plumed.1$i.dat; done
+for i in {0..9}; do mv plumed.2.$i.dat plumed.2$i.dat; done
+for i in {0..9}; do mv plumed.3.$i.dat plumed.3$i.dat; done
+
+gmx grompp -f mdout-u.mdp -c conf1.gro  -p what.top -n what.ndx
+for i in {0..5}; do cp topol.tpr topol$i.tpr ; done
+gmx grompp -f mdout-u.mdp -c conf2.gro  -p what.top -n what.ndx
+for i in {6..10}; do cp topol.tpr topol$i.tpr ; done
+gmx grompp -f mdout-u.mdp -c conf3.gro  -p what.top -n what.ndx
+for i in {11..15}; do cp topol.tpr topol$i.tpr ; done
+gmx grompp -f mdout-u.mdp -c conf4.gro  -p what.top -n what.ndx
+for i in {16..20}; do cp topol.tpr topol$i.tpr ; done
+gmx grompp -f mdout-u.mdp -c conf5.gro  -p what.top -n what.ndx
+for i in {21..25}; do cp topol.tpr topol$i.tpr ; done
+gmx grompp -f mdout-u.mdp -c conf6.gro  -p what.top -n what.ndx
+for i in {26..30}; do cp topol.tpr topol$i.tpr ; done
+gmx grompp -f mdout-u.mdp -c conf7.gro  -p what.top -n what.ndx
+for i in {31..39}; do cp topol.tpr topol$i.tpr ; done
+
