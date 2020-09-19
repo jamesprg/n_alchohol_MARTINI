@@ -32,8 +32,8 @@ We hope that many of the files and tools provided here can be applied to other M
   - __Step 5.1__ - Use `bilayerthickness.py` in order to calculate the width of each model membrane.
   
   - __Step 5.2__ - Use `do-order-multiedit.py` (minor tweaks to the one provided by MARTINI) in     order to calculate the lipid tail order parameter described in section 3.2 of the paper.
-  - __Step 5.3__ - Use 'flipflop.py' in order to calculate number of bilayer crossing events for alcohol and cholesterol in a model MARTINI membranes (built for single phase membrane systems).
-  - __Step 5.4__ - Use 'density.py' quickly generate the densities for components in the direction normal to the membrane (built for single phase membrane systems). 
+  - __Step 5.3__ - Use `flipflop.py` in order to calculate number of bilayer crossing events for alcohol and cholesterol in a model MARTINI membranes (built for single phase membrane systems).
+  - __Step 5.4__ - Use `density.py` quickly generate the densities for components in the direction normal to the membrane (built for single phase membrane systems). 
 
 ### Citation
 
