@@ -25,7 +25,7 @@ We hope that many of the files and tools provided here can be applied to other M
 
 - __Step 3__ - Follow our methods section in order to equilibrate and run single phase systems (again n-alcohol addition is completely optional).
 
-- __Step 4__ - Use a combination of metadynamics and umbrella sampling (we do so with [PLUMED]) in order to remove a desired cholesterol molecule and measure the free energy of this transition in various conditions. Associated scrips for this process are found in the scripts/umbrella_scripts/ directory. The WHAM method is then used to stitch each window together generating the compltete free energy surface of the process. The WHAM command is included in `pmfcalculation.sh` bash script.
+- __Step 4__ - Use a combination of metadynamics and umbrella sampling (we do so with `PLUMED`) in order to remove a desired cholesterol molecule and measure the free energy of this transition in various conditions. Associated scrips for this process are found in the scripts/umbrella_scripts/ directory. The WHAM method is then used to stitch each window together generating the compltete free energy surface of the process. The WHAM command is included in `pmfcalculation.sh` bash script.
 
 - __Step 5__ -  Calculation of various membrane properties can be conducted on the resulting data using various tools in the scripts/ directory. 
 
