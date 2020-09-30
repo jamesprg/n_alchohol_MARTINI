@@ -13,7 +13,7 @@ import MDAnalysis
 import itertools
 sys.path.insert(0, r'/Download/')
 import msmbuildertools as msm
-import bilayertest as comthick
+import bilayerthickness as comthick
 import gaussparams
 
 
